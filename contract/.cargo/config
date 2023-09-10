@@ -1,0 +1,4 @@
+[alias]
+wasm-build = "build --target wasm32-unknown-unknown --release"
+wasm-build-debug = "build --target wasm32-unknown-unknown"
+wasm-test = "test -- --nocapture"

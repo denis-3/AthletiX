@@ -1,0 +1,4 @@
+# Smart contract build
+contract/Cargo.lock
+contract/artifacts
+contract/target
