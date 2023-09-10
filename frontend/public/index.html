@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>AthletiX</title>
+		<link rel="stylesheet" href="./styles.css">
+		<!-- Athlete Search -->
+		<link rel="preload" href="https://cdn.glitch.global/b9507eea-b8af-4568-b3b2-8ef80ae28aa8/athlete_search.jpeg?v=1694365586615" as="image">
+		<!-- Carranza PFP -->
+		<link rel="preload" href="https://cdn.glitch.global/b9507eea-b8af-4568-b3b2-8ef80ae28aa8/carranza_pfp.jpeg?v=1694365597775" as="image">
+	</head>
+	<body>
+		<img id="main-content" src="https://cdn.glitch.global/b9507eea-b8af-4568-b3b2-8ef80ae28aa8/my_athletes.jpeg?v=1694365581701" alt="main page" usemap="#img-map-1">
+
+		<map name="img-map-1">
+			  <area shape="rect" coords="200,0,1000,60" onclick="progressMainContent()" href="#">
+		</map>
+
+		<map name="img-map-2">
+			  <area shape="rect" coords="225,200,1100,260" onclick="setAthleteModalVisibility(true)" href="#">
+		</map>
+
+		<div id="athlete-modal" style="display:none">
+			<h2>Athlete Details</h2>
+			<hr>
+			<div id="athlete-modal-top-bar">
+				<div id="athlete-pfp-container">
+					<img src="https://cdn.glitch.global/b9507eea-b8af-4568-b3b2-8ef80ae28aa8/carranza_pfp.jpeg?v=1694365597775" alt="Carranza PFP">
+					<div>
+						<p>Julain Carranza</p>
+						<p style="color:grey">MlS, 2022-2023 Season</p>
+					</div>
+				</div>
+				<div id="athlete-trend-container">
+					<p>Followers: <span style="color:black">118k</span></p>
+					<p>Weekly trend: <span style="color:green">+10%</span></p>
+				</div>
+			</div>
+			<hr>
+			<table id="athlete-stats-table">
+				<tr>
+					<td>Body Comp</td>
+					<td>182cm, 76kg (5-11.5, 168lb)</td>
+				</tr>
+				<tr>
+					<td>Position</td>
+					<td>FW</td>
+				</tr>
+				<tr>
+					<td>Born</td>
+					<td>May 22, 2000 (Age 23) in Oncativo, Argentina</td>
+				</tr>
+				<tr>
+					<td>Goals Scored</td>
+					<td>12</td>
+				</tr>
+				<tr>
+					<td>Assists</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>Expected Goals</td>
+					<td>9.2</td>
+				</tr>
+				<tr>
+					<td>Non-Penalty Exp. Goals</td>
+					<td>8.5</td>
+				</tr>
+				<tr>
+					<td>Goal-Creating Actions</td>
+					<td>12.7</td>
+				</tr>
+				<tr>
+					<td>Price Per Share</td>
+					<td id="athlete-stats-share-price">$0</td>
+				</tr>
+				<tr>
+					<td>Shares Owned</td>
+					<td class="athlete-stats-shares-owned">0</td>
+				</tr>
+				<tr>
+					<td>Perks Claimed</td>
+					<td>5</td>
+				</tr>
+			</table>
+			<div id="athlete-share-trade-container">
+				<!-- <input type="text" placeholder="Enter shares..."> -->
+				<h3 style="color:white">You have <span class="athlete-stats-shares-owned">0</span> share(s)</h3>
+				<div>
+					<button style="background-color:#FC0000;margin-right:8px" onclick="sellShare()">Sell</button>
+					<button style="background-color:#0AA630" onclick="buyShare()">Buy</button>
+				</div>
+			</div>
+			<div id="athlete-perk-container">
+				<div>
+					<p>4,895 Shares bought in the last hour</p>
+					<p style="color:#FA699D;font-size:12px" id="perk-claim-alert">You have 1 perk to claim</p>
+				</div>
+				<button id="perk-claim-button" onclick="claimPerk()">Claim</button>
+			</div>
+		</div>
+		<div id="athlete-modal-bg" style="display:none" onclick="setAthleteModalVisibility(false)"></div>
+		<script crossorigin src="https://unpkg.com/cosmwasm@1.1.1/dist/bundle.js" type="text/javascript" ></script>
+		<script src="./script.js" charset="utf-8"></script>
+	</body>
+</html>

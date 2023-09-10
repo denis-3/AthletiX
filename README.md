@@ -16,4 +16,12 @@ Run `cargo command-name` to execute any one of the commands and replace `command
 ## Contract - Testnet and Mainnet Deployment
 This contract has quite a large size when compiled (about a few MB). Therefore it is recommended to optimize the deployment size using the [Rust optimizer](https://github.com/CosmWasm/rust-optimizer). This tool can get the size down of the compiled `.wasm` binary to just about 200KB!
 
-The contract currently deployed to the Sei testnet at: https://www.seiscan.app/atlantic-2/contracts/sei1hc9xmnc6lmckxu29tk35arc02cfxwk24nphjruh2x9m8f2ap3kese7jeh8
+The contract is currently deployed to the Sei testnet at: https://www.seiscan.app/atlantic-2/contracts/sei1hc9xmnc6lmckxu29tk35arc02cfxwk24nphjruh2x9m8f2ap3kese7jeh8
+
+## Frontend - Local Development
+
+`cd` into `/frontend`, then run `npm install` to install the required packages. Run `node app.js` to start the frontend server, then visit `localhost:3000` in the browser to see the frontend.
+
+## Frontend - Deployment
+
+The frontend is deployed to https://athletix-demo.glitch.me/

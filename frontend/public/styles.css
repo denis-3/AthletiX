@@ -1,0 +1,156 @@
+body {
+	font-family: Arial;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+hr {
+	border-color: #DDDDDD;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+}
+
+#main-content {
+	/* max-width: 100vmin; */
+	max-height: 100vmin;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#athlete-modal-bg {
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#athlete-modal {
+	border-radius: 8px;
+	padding: 18px;
+	width: 50%;
+	z-index: 9999;
+	position: relative;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	background-color: white;
+}
+
+#athlete-modal > h2 {
+	margin-top: 6px;
+}
+
+#athlete-modal-top-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0;
+}
+
+#athlete-pfp-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#athlete-pfp-container > img {
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-right: 18px;
+}
+
+#athlete-pfp-container > div > p,
+#athlete-trend-container > p {
+	margin: 6px 0;
+	font-size: 15px;
+}
+
+#athlete-trend-container > p {
+	color: #84818A;
+}
+
+#athlete-stats-table {
+	margin-top: 8px;
+	font-size: 13px;
+	border-spacing: 0 14px;
+	border-collapse: separate;
+	padding: 0;
+}
+
+#athlete-stats-table tr td:first-of-type {
+	font-weight: bold;
+	padding-right: 30px;
+}
+
+#athlete-stats-table tr td:nth-last-of-type(2n+1) {
+	color: #84818A;
+}
+
+#athlete-share-trade-container {
+	background-color: #222222;
+	padding: 14px;
+	border-radius: 8px 8px 0 0;
+	/* width: 100%; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#athlete-share-trade-container > input {
+	border-radius: 8px;
+	border: none;
+	padding: 12px;
+	width: 10ch;
+	background-color: white;
+}
+
+#athlete-share-trade-container > div > button {
+	border-radius: 4px;
+	border: none;
+	padding: 8px 38px;
+	color: white;
+	cursor: pointer;
+}
+
+#athlete-perk-container {
+	background-color: #F6F6F6;
+	padding: 14px;
+	border-radius: 0 0 8px 8px;
+	/* width: 100%; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#athlete-perk-container > div > p {
+	font-size: 14px;
+	margin: 6px 0;
+}
+
+#athlete-perk-container > button {
+	background-color: #007AFF;
+	border-radius: 4px;
+	border: 0;
+	padding: 8px 32px;
+	color:white;
+	cursor: pointer;
+}
+
+#athlete-perk-container > button[disabled] {
+	background-color: #84818A;
+	cursor: not-allowed !important;
+}
